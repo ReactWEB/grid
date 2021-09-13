@@ -1,0 +1,220 @@
+/*GLOBAL*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container, header, div {
+  border: 1px solid #000;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 2fr 1fr;
+      grid-template-columns: 2fr 2fr 1fr;
+  -ms-grid-rows: 1fr 2fr 1fr 0.5fr 2fr 1fr;
+      grid-template-rows: 1fr 2fr 1fr 0.5fr 2fr 1fr;
+      grid-template-areas: "logo logo about" "side pict pict" "side flow flow" "infin infin infin" "cont cont cont" "hil hil hil";
+}
+
+.logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: logo;
+  position: relative;
+}
+
+.logo .circle {
+  width: 7%;
+  position: absolute;
+  display: block;
+  z-index: 1;
+  left: 43%;
+  top: 8%;
+}
+
+.logo .back {
+  position: absolute;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
+  height: 12.4vh;
+}
+
+.about {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: about;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.onleft {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: side;
+  overflow-y: scroll;
+  background-color: #ffffff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 2%;
+}
+
+.onleft ::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f9f9fd;
+}
+
+.onleft ::-webkit-scrollbar-thumb {
+  background-color: #223c50;
+}
+
+.onleft .overflow {
+  min-height: 400px;
+}
+
+.onleft .onleft__items-left {
+  border: none;
+}
+
+.onleft .onleft__items-right {
+  margin-top: 22%;
+  border: none;
+}
+
+.picture {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: pict;
+  position: relative;
+}
+
+.picture .kvarzpol, .picture .mramor {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.picture .kvarzpol {
+  width: 45%;
+  top: 2%;
+  left: 1%;
+}
+
+.picture .mramor {
+  width: 45%;
+  top: 33%;
+  left: 54%;
+}
+
+.picture img {
+  width: 30%;
+  height: 30%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  border: none;
+}
+
+.flowers {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: flow;
+}
+
+.flowers .beauty {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
+  height: 15vh;
+}
+
+.infinite {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: infin;
+}
+
+.infinite marquee {
+  padding-top: 1%;
+}
+
+.content {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: cont;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .content__item {
+  width: 48%;
+  margin: 1% 1% 1% 1%;
+}
+
+.hils {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: hil;
+}
+
+.hils .hills {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
+  height: 15vh;
+}
+
+@media (max-width: 400px) {
+  .container {
+    height: 180vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "logo logo" "about about"     "side side" "side side"     "pict pict"  "pict pict"          "flow flow" "infin infin" "cont cont"     "hil hil";
+  }
+}
+/*# sourceMappingURL=main.css.map */
